@@ -4,6 +4,7 @@ async function getLastFMInfo() {
 
     if (!info) { return }
 
+    const wrapper_div = document.getElementById("wrapper-div")
     const album_art = document.getElementById("album-art")
     const track_title = document.getElementById("track-title")
     const album_name = document.getElementById("album-name")
@@ -14,15 +15,16 @@ async function getLastFMInfo() {
     album_name.innerText = info["album"]["#text"]
     artist.innerText = info["artist"]["#text"]
 
-    console.log("check!")
+    if (info["@attr"]) {
+	wrapper_div.style.display = null
+    } else {
+	wrapper_div.style.display = "none"
+    }
+    console.log(info)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     setInterval(getLastFMInfo, 6e4)
 
-    getLastFMInfo().then(() => {
-	const wrapper_div = document.getElementById("wrapper-div")
-	wrapper_div.style.display = null
-	console.log("loaded!")
-    })
+    getLastFMInfo()
 }, false)
