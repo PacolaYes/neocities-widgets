@@ -1,0 +1,17 @@
+
+#wrapper-div {
+    display: flex;
+}
+
+#wrapper-div img {
+    aspect-ratio: 1 / 1;
+}
+
+#wrapper-div div {
+    margin-left: .3em;
+    flex-direction: column;
+}
+
+#wrapper-div div p {
+    margin-bottom: .4em;
+}
