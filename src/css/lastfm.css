@@ -1,6 +1,21 @@
 
+body {
+    font-family: "Shantell Sans", cursive;
+    font-size: 18px;
+    font-variation-settings:
+        "BNCE" -70,
+        "INFM" 100,
+        "SPAC" 2;
+
+    background-color: transparent;
+
+    max-width: max-content;
+    max-height: max-content;
+}
+
 #wrapper-div {
-    display: flex;
+    display: inline-flex;
+    width: max-content;
 }
 
 #wrapper-div img {
@@ -17,5 +32,6 @@
 }
 
 .big {
-    font-size: 1.4em;
+    font-size: 1.25em;
+    font-weight: bold;
 }
