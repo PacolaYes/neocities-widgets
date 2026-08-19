@@ -7,7 +7,7 @@ async function getLastFMInfo() {
 
     if (!info) { return }
 
-    window.postMessage(info, "*") // maybe simplify data?
+    window.parent.postMessage(info, "*") // maybe simplify data?
     console.log(info)
 }
 
