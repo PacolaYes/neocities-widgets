@@ -8,7 +8,6 @@ async function getLastFMInfo() {
     if (!info) { return }
 
     window.parent.postMessage(info, "*") // maybe simplify data?
-    console.log(info)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
