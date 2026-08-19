@@ -3,7 +3,6 @@ my neocities widgets, made to bypass the fact i cant do it straight in neocities
 
 # Credits
 - biancarosa for the [last.fm last played api thingy](https://github.com/biancarosa/lastfm-last-played), which i use in my, you guessed it, last.fm widget :O
-- [open-iframe-resizer](https://github.com/Lemick/open-iframe-resizer) for... automatically resizing all of this :P
 
 # Notes:
 - maybe replace last.fm with libre.fm? since that's fully open source n' whatevers
