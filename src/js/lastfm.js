@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	return
     }
 
-    setInterval(getLastFMInfo, 6e4)
+    //setInterval(getLastFMInfo, 6e4) // kinda conflicted on fetching data semi-frequently from biancarosa, since i don't host that
 
     getLastFMInfo()
 }, false)
