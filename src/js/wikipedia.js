@@ -10,7 +10,10 @@ async function getWikipediaInfo(params) {
 	}
 
 	const info = await response.json();
-	window.parent.postMessage(info, "*");
+	window.parent.postMessage({
+	    message_type: "wikipedia-response",
+	    ...info
+	}, "*");
     } catch (error) {
 	console.error(error.message);
     }
@@ -19,3 +22,10 @@ async function getWikipediaInfo(params) {
 document.addEventListener("message", (event) => {
     getWikipediaInfo(event.data);
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    window.parent.postMessage({
+	message_type: "iframe-loaded",
+	data: "loaded!"
+    }, "*")
+}
