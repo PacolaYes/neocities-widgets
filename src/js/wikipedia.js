@@ -19,7 +19,7 @@ async function getWikipediaInfo(params) {
     }
 }
 
-document.addEventListener("message", (event) => {
+window.addEventListener("message", (event) => {
     getWikipediaInfo(event.data);
 })
 
