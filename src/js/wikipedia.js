@@ -28,4 +28,4 @@ document.addEventListener("DOMContentLoaded", () => {
 	message_type: "iframe-loaded",
 	data: "loaded!"
     }, "*")
-}
+})
