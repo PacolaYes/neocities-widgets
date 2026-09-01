@@ -1,7 +1,5 @@
 
 async function getWikipediaInfo(params) {
-    console.log(params);
-
     const urlParams = new URLSearchParams(params)
     try {
 	const response = await fetch(`https://en.wikipedia.org/w/api.php?format=json&${urlParams}`);
@@ -12,6 +10,7 @@ async function getWikipediaInfo(params) {
 	const info = await response.json();
 	window.parent.postMessage({
 	    message_type: "wikipedia-response",
+	    message_source: "wikipedia",
 	    ...info
 	}, "*");
     } catch (error) {
@@ -26,6 +25,6 @@ window.addEventListener("message", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
     window.parent.postMessage({
 	message_type: "iframe-loaded",
-	data: "loaded!"
+	message_source: "wikipedia"
     }, "*")
 })
